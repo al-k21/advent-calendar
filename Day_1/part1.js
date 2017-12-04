@@ -1,7 +1,7 @@
 const fs = require('fs');
-const helper = require('./../helper.js')
+const helper = require('./helper.js')
 
-let input = helper.getInput('./../input.txt');
+let input = helper.getInput('./input.txt');
 
 input.push(input[0]); // Append first character to the end
 

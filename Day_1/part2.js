@@ -1,7 +1,7 @@
 const fs = require('fs');
-const helper = require('./../helper.js')
+const helper = require('./helper.js')
 
-const input = helper.getInput('./../input.txt');
+const input = helper.getInput('./input.txt');
 const half_circle = input.length/2;
 let position, sum = 0;
 
