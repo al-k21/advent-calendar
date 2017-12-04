@@ -1,15 +1,14 @@
 const fs = require('fs');
+const helper = require('./../helper.js')
 
-let input = fs.readFileSync('./input.txt', 'utf8');
-input = input.slice(0, input.length -1); // Delete new line character
+let input = helper.getInput('./../input.txt');
 
-let split_input= input.split(''); // Create an array of characters
-split_input.push(split_input[0]); // Append first character to the end
+input.push(input[0]); // Append first character to the end
 
 let sum = 0;
-for (var i = 0; i < split_input.length; i++) {
-  if (split_input[i] == split_input[i+1]) {
-    sum += parseInt(split_input[i]);
+for (var i = 0; i < input.length; i++) {
+  if (input[i] === input[i+1]) {
+    sum += input[i];
   }
 }
 
