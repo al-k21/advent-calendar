@@ -1,22 +1,18 @@
+const fs = require('fs');
 
 let arr = [];
-let input = [225,171,131,2,35,5,0,13,1,246,54,97,255,98,254,110];
 let curPos = 0, skip = 0;
+let input = fs.readFileSync('./input', 'utf8');
+input = input.slice(0, input.length - 1).split(','); // Delete new line character
 
+for (i in input)  { input[i] = parseInt(input[i]); }
 for (i =0; i<256;i++){ arr[i]=i; }
-
-// console.log(arr, "arr");
-// console.log(input, "input");
-// let string="";
-// arr.forEach(function(element){ string += element + " "; });
-// console.log(string);
 
 for (length of input) {
   arr = getArray(length, skip, curPos);
   curPos = curPos + length + skip;
   if (curPos > arr.length) { curPos -= arr.length; }
   skip ++;
-  // console.log(arr, "<<<<");
 }
 
 console.log(arr[0]*arr[1]);
