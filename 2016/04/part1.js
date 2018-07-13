@@ -11,21 +11,14 @@ input.forEach(line => {
   line.pop();
   const name = line.join('');
   const myObj = Char_Counts(name);
-  let keys = Object.keys(myObj);
-  let str = '', obj = {};
+  let [keys, str, obj] = [Object.keys(myObj), '', {}];
 
   keys.sort();
-  keys.forEach(key => {
-    obj[key] = myObj[key];
-  })
+  keys.forEach(key => { obj[key] = myObj[key];})
 
   for (let x = 0; x < 5; x++) {
     let largest = 0, myKey;
-    Object.keys(obj).forEach(key => {
-      if (obj[key] > largest) {
-        myKey = key; largest = obj[key];
-      }
-    });
+    Object.keys(obj).forEach(key => { if (obj[key] > largest) myKey = key; largest = obj[key]; });
     str += myKey;
     delete obj[myKey];
   }

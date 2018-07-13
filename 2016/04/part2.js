@@ -4,7 +4,6 @@ const input = fs.readFileSync('./input', 'utf8').trim().split('\n');
 let sum = 0;
 
 input.forEach(line => {
-
   line = line.split('-');
   const id = parseInt(line[line.length-1].split('[')[0]);
   const checksum = line[line.length-1].split('[')[1].replace(']', '');

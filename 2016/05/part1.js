@@ -9,9 +9,7 @@ function findPassword(input) {
     let [index, hash, password] = [-1, '', ''];
     while (password.length < 8) {
       hash = md5(`${input}${++index}`);
-      if (hash.substr(0, 5) === '00000') {
-        password += hash.substr(5, 1);
-      }
+      if (hash.substr(0, 5) === '00000') password += hash.substr(5, 1);
     }
     return password;
 }
