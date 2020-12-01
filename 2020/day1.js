@@ -1,4 +1,3 @@
-const fs = require('fs');
 const helper = require('./utils/helper_functions');
 
 function part1(input) {
