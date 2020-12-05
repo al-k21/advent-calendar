@@ -109,6 +109,6 @@ const passports=createPassports();
 const part1_result = part1(passports);
 const part2_result = part2(passports);
 
-console.log("Day 3:");
+console.log("Day 4:");
 console.log("-> Part 1:", part1_result);
 console.log("-> Part 2:", part2_result);
